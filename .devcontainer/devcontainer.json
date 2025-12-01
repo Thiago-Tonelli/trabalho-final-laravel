@@ -1,0 +1,20 @@
+{
+  "name": "Laravel PHP + MySQL Environment",
+  "image": "mcr.microsoft.com/devcontainers/php:8.3",
+  "features": {
+    "ghcr.io/devcontainers/features/mysql:1": {
+      "version": "latest"
+    }
+  },
+  "postCreateCommand": "composer install || true",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "bmewburn.vscode-intelephense-client",
+        "xabikos.JavaScriptSnippets",
+        "MS-CEINTL.vscode-language-pack-pt-BR"
+      ]
+    }
+  },
+  "forwardPorts": [3306, 8000]
+}
