@@ -1,13 +1,7 @@
 {
-  "name": "Laravel + PHP 8.3 + MySQL",
+  "name": "Laravel PHP 8.3 + MySQL (Manual Install)",
   "image": "mcr.microsoft.com/devcontainers/php:8.3",
-  "features": {
-    "ghcr.io/devcontainers/features/mysql:1": {
-      "version": "8.0",
-      "password": "root"
-    }
-  },
-  "postCreateCommand": "composer install",
+  "postCreateCommand": "bash .devcontainer/setup.sh",
   "customizations": {
     "vscode": {
       "extensions": [
