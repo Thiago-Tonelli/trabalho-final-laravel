@@ -1,12 +1,7 @@
 {
-  "name": "Laravel PHP + MySQL Environment",
-  "image": "mcr.microsoft.com/devcontainers/php:8.3",
-  "features": {
-    "ghcr.io/devcontainers/features/mysql:1": {
-      "version": "latest"
-    }
-  },
-  "postCreateCommand": "composer install || true",
+  "name": "Laravel PHP 8.3 DevContainer",
+  "image": "mcr.microsoft.com/devcontainers/php:8.3-bullseye",
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y mariadb-server mariadb-client && composer install || true",
   "customizations": {
     "vscode": {
       "extensions": [
@@ -16,5 +11,6 @@
       ]
     }
   },
-  "forwardPorts": [3306, 8000]
+  "forwardPorts": [3306, 8000],
+  "remoteUser": "vscode"
 }
